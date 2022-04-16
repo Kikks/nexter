@@ -1,0 +1,47 @@
+.story{
+
+    &__pictures{
+      grid-column: full-start / col-end 4;
+
+      background-image: linear-gradient(to right bottom,
+                        rgba($basic-color, 0.5),
+                        rgba($basic-color, 0.5)),
+                        url(../img/back.jpg);
+      background-size: cover;
+
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(6, [col-start] 1fr [col-end]);
+      align-items: center;
+    }
+
+    &__image--1{
+      width: 100%;
+      grid-row: 2 / 6;
+      grid-column: col-start 2 / col-end 5;
+      box-shadow: 0 2rem 5rem rgba(black, 0.2);
+    }
+
+    &__image--2{
+      width: 115%;
+      grid-row: 4 / 6;
+      grid-column: col-start 4 / -1;
+      z-index: 10;
+      box-shadow: 0 2rem 5rem rgba(black, 0.3);
+    }
+
+    &__content{
+      display: grid;
+      justify-items: start;
+      align-content: center;
+      background-color: $color-grey-light-1;
+      grid-column: col-start 5 / full-end;
+
+      padding: 6rem 8vw;
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+    }
+}

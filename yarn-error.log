@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add live-server
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\php;C:\Users\Da_Vinci\AppData\Local\Android\Sdk\tools;C:\Users\Da_Vinci\AppData\Local\Android\Sdk\platform-tools;C:\Users\Da_Vinci\AppData\Local\Android;C:\Progra~1\Java\jdk-12.0.1\bin;C:\Progra~1\MongoDB\Server\4.2\bin;C:\Users\Da_Vinci\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Da_Vinci\AppData\Local\Programs\Python\Python38-32\;C:\Users\Da_Vinci\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Da_Vinci\AppData\Local\Programs\Python\Python38\;C:\Users\Da_Vinci\AppData\Local\Microsoft\WindowsApps;C:\Users\Da_Vinci\AppData\Roaming\npm;C:\Users\Da_Vinci\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\Da_Vinci\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+
+npm manifest: 
+  {
+    "name": "Nexter",
+    "version": "1.0.0",
+    "description": "Nexter webpage",
+    "main": "index.js",
+    "scripts": {
+      "watch:sass": "node-sass sass/main.scss css/style.css -w",
+      "devserver": "live-server",
+      "start": "npm-run-all --parallel devserver watch:sass",
+      "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+      "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+      "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+      "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    },
+    "author": "Da_Vinci",
+    "license": "ISC",
+    "devDependencies": {
+      "autoprefixer": "^7.1.4",
+      "concat": "^1.0.3",
+      "node-sass": "^4.5.3",
+      "npm-run-all": "^4.1.1",
+      "postcss-cli": "^4.1.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
